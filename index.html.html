@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>গহনাবিলাসী – Gohonabilashi | Handmade Jewellery</title>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--surface:#FBF7F4;--ink:#1E1B1F;--muted:#6E6670;--accent:#8F6420;--accent-ink:#FFFFFF;--gold:#B8893B;--line:#EADFD8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121014;--surface:#1C181F;--ink:#F3EEE6;--muted:#B3A9B8;--accent:#D9AE63;--accent-ink:#1A1305;--gold:#D9AE63;--line:#3A333F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121014;--surface:#1C181F;--ink:#F3EEE6;--muted:#B3A9B8;--accent:#D9AE63;--accent-ink:#1A1305;--gold:#D9AE63;--line:#3A333F;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Hind Siliguri',system-ui,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:'Anek Bangla','Hind Siliguri',system-ui,sans-serif;font-weight:500;line-height:1.25;letter-spacing:-.01em;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;flex-wrap:wrap}
+.logo{font-family:'Anek Bangla','Hind Siliguri',system-ui,sans-serif;font-size:1.5rem;font-weight:500;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:4px;flex-wrap:wrap;order:3;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px 0}
+nav a{padding:6px 14px;border-radius:999px;text-decoration:none;color:var(--ink)}
+nav a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+button{font:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.cartbtn{background:none;border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:999px}
+.hero{padding:36px 0 44px;display:grid;gap:28px;grid-template-columns:1.2fr 1fr;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.4rem)}
+.hero p{color:var(--muted);max-width:46ch;font-size:1.05rem;margin:16px 0 24px}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;display:inline-block}
+.heroart{background:var(--surface);border:1px solid var(--line);border-radius:50% 50% 12px 12px;aspect-ratio:4/5;display:grid;place-items:center;padding:24px}
+h2.sec{font-size:2rem;margin:8px 0 16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:40px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;color:var(--ink)}
+.tile h3{font-size:1.6rem;margin-bottom:6px}
+.tile span{color:var(--muted);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-bottom:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .art{aspect-ratio:1;display:grid;place-items:center;padding:22px}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.card h3{font-size:1.25rem}
+.card small{color:var(--muted)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.price{font-weight:600}
+.add{background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:7px 16px;font-weight:600}
+.intro{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;margin:12px 0 26px}
+.intro h1{font-size:2.2rem;margin-bottom:10px}
+.intro p{margin:0;max-width:62ch;color:var(--muted)}
+.page{max-width:680px;margin:12px 0 48px}
+.page h1{font-size:2.2rem;margin-bottom:14px}
+.page p{color:var(--muted);margin:0 0 14px}.page h3{font-size:1.2rem;margin:24px 0 6px}
+.page p.lead{color:var(--ink);font-size:1.15rem}
+footer{padding:24px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(420px,100%);background:var(--surface);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .25s;z-index:20;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top,0px)) 20px calc(18px + env(safe-area-inset-bottom,0px));overflow-y:auto}
+.drawer.open{transform:none}
+.drawer h2{font-size:1.8rem;margin-bottom:12px}
+.close{align-self:flex-end;background:none;border:0;color:var(--ink);font-size:1.6rem;line-height:1}
+.item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;align-items:center;gap:8px;margin-top:4px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink)}
+.total{display:flex;justify-content:space-between;font-weight:600;padding:14px 0}
+label{display:block;font-size:.9rem;margin:10px 0 4px}
+input,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.msg{color:var(--muted);padding:14px 0}
+.done{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px}
+.err{color:#B3261E;font-size:.9rem;margin-top:8px}
+@media (prefers-color-scheme:dark){.err{color:#F2B8B5}}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.heroart{max-width:280px}}
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+.tools{display:flex;gap:8px;align-items:center}.tool{background:none;border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:999px;min-width:44px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#home">গহনাবিলাসী</a>
+  <div class="tools"><button class="tool" id="langBtn" type="button"></button><button class="tool" id="themeBtn" type="button"></button><button class="cartbtn" id="openCart" type="button"></button></div>
+  <nav id="nav" aria-label="মেনু"></nav>
+</header>
+<main id="view"></main>
+<footer id="footer"></footer>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+  <button class="close" id="closeCart">×</button>
+  <h2 id="cartTitle"></h2>
+  <div id="cartBody"></div>
+</aside>
+
+<script>
+// ---- EDIT HERE ----
+var WHATSAPP = "8801700000000"; // your number with country code, no + sign
+var PHONE_TEXT = "+880 1700-000000";
+var T = {
+ home:["হোম","Home"],resin:["রেজিন","Resin"],clay:["ক্লে","Clay"],jewellery:["জুয়েলারি","Jewellery"],about:["আমাদের কথা","Our story"],contact:["যোগাযোগ","Contact"],policy:["নীতিমালা","Policies"],polLead:["অর্ডার করার আগে আমাদের নিয়মগুলো এক নজরে দেখে নিন।","A quick look at how our orders work, before you buy."],
+ heroH:["হাতে গড়া গহনা, স্মৃতির জন্য।","Handmade jewellery, made for memories."],
+ heroP:["রেজিন আর ক্লে দিয়ে প্রতিটি গহনা নিজের হাতে তৈরি। পছন্দ করুন, কার্টে রাখুন, এক মিনিটে অর্ডার পাঠান।","Every piece is made by hand from resin and clay. Choose, add to cart, and send your order in a minute."],
+ heroBtn:["গহনা দেখুন","See the jewellery"],byType:["ধরন অনুযায়ী দেখুন","Browse by type"],picks:["বাছাই করা কয়েকটি","Our picks"],
+ add:["কার্টে রাখুন","Add to cart"],added:["যোগ হয়েছে","Added"],
+ aboutH:["আমাদের গল্প","Our story"],
+ about1:["২০২৪ সালে, সংসারের ব্যস্ততার ফাঁকে একজন গৃহিণীর ছোট্ট একটি স্বপ্ন থেকে জন্ম নেয় গহনাবিলাসী। হাতে গড়া প্রথম গহনাটি থেকেই শুরু হয় আমাদের পথচলা।","Gohonabilashi was born in 2024, from a housewife’s small dream, in the gaps between household chores. Our journey began with the very first piece made by hand."],
+ about2:["আমরা বিশ্বাস করি, গহনা শুধু সাজের জিনিস নয়, এটি একটি স্মৃতি। কারও জন্মদিনের উপহার, কারও বিশেষ দিনের সাজ, কারও প্রিয় মানুষের ভালোবাসা। তাই দামের চেয়ে মানুষের স্মৃতিকে আমরা সবসময় বেশি গুরুত্ব দিই।","We believe jewellery is more than adornment. It is a memory: a birthday gift, the look for a special day, a loved one’s affection. That is why we always value people’s memories above price."],
+ about3:["প্রতিটি গহনা আমরা নিজের হাতে, যত্ন আর ভালোবাসা দিয়ে তৈরি করি, যেন তা আপনার গল্পের একটি অংশ হয়ে থাকে।","We make every piece with our own hands, with care and love, so that it becomes a part of your story."],
+ contactH:["যোগাযোগ","Contact"],contactLead:["অর্ডার, কাস্টম ডিজাইন বা যেকোনো প্রশ্নের জন্য আমাদের লিখুন।","Write to us for orders, custom designs or any question."],
+ phone:["ফোন: ","Phone: "],wa:["WhatsApp-এ মেসেজ করুন","Message on WhatsApp"],
+ cart:["কার্ট","Cart"],cartTitle:["আপনার কার্ট","Your cart"],closeCart:["কার্ট বন্ধ করুন","Close cart"],
+ empty:["আপনার কার্ট খালি। পছন্দের গহনা কার্টে রাখুন।","Your cart is empty. Add a piece you like."],
+ less:["একটি কমান","Remove one"],more:["একটি বাড়ান","Add one"],total:["মোট","Total"],
+ nameL:["আপনার নাম","Your name"],phoneL:["ফোন নম্বর","Phone number"],addrL:["ডেলিভারির ঠিকানা","Delivery address"],noteL:["নোট (ঐচ্ছিক)","Note (optional)"],
+ notePh:["রং, সাইজ বা উপহারের বার্তা","Colour, size or gift message"],
+ err:["নাম, ফোন নম্বর আর ঠিকানা লিখুন।","Fill in your name, phone number and address."],
+ send:["WhatsApp-এ অর্ডার পাঠান","Send order on WhatsApp"],
+ almost:["প্রায় শেষ","Almost done"],
+ almostP:["নিচের বোতামে চাপ দিয়ে WhatsApp-এ অর্ডারের তথ্য পাঠান। আমরা মেসেজে নিশ্চিত করব।","Tap the button to send your order details on WhatsApp. We will confirm by message."],
+ openWa:["WhatsApp খুলুন","Open WhatsApp"],
+ newOrder:["নতুন অর্ডার","New order"],nameW:["নাম","Name"],phoneW:["ফোন","Phone"],addrW:["ঠিকানা","Address"],noteW:["নোট","Note"],
+ footer:["© ২০২৪ গহনাবিলাসী · হাতে গড়া গহনা, স্মৃতির জন্য","© 2024 Gohonabilashi · Handmade jewellery, made for memories"],
+ theme:["থিম বদলান (ডার্ক / লাইট)","Switch theme (dark / light)"],langBtn:["English","বাংলা"],menu:["মেনু","Menu"]
+};
+var CATS = {
+ resin:{blurb:["ফুল, পাতা আর রঙের ছোঁয়া","Flowers, leaves and a touch of colour"],intro:["রেজিনের গহনায় ছোট্ট ফুল, পাতা বা প্রিয় রঙ চিরদিনের জন্য স্বচ্ছ আবরণে ধরে রাখা হয়। প্রতিটি টুকরো আমরা নিজের হাতে ঢালি, শুকাই আর পালিশ করি। তাই কোনো দুটি গহনা একদম এক হয় না। রেজিনের গহনা হালকা, তবে পানি আর সরাসরি রোদ থেকে দূরে রাখলে অনেক দিন নতুন থাকে।","Resin jewellery holds a small flower, a leaf or a favourite colour inside a clear layer, kept forever. We pour, dry and polish each piece by hand, so no two are exactly alike. Resin is light to wear. Keep it away from water and direct sun and it stays new for a long time."]},
+ clay:{blurb:["মাটির গন্ধমাখা হাতের কাজ","Handwork with the warmth of earth"],intro:["ক্লে বা মাটির গহনায় থাকে হাতের স্পর্শ আর মাটির নিজস্ব উষ্ণতা। আমরা মাটি গড়ি, নকশা খোদাই করি, শুকাই এবং রং করি। প্রতিটি নকশা আলাদা করে ভাবা হয়। ক্লের গহনা খুব হালকা, তাই সারাদিন পরেও আরাম লাগে। ভেজা অবস্থায় না রেখে শুকনো জায়গায় রাখলে বহুদিন ভালো থাকে।","Clay jewellery carries the warmth of the earth and the touch of the hand. We shape the clay, carve each design, dry it and paint it ourselves. Every pattern is thought through one by one. Clay pieces are very light, so they stay comfortable all day. Store them dry and they will last for years."]},
+ jewellery:{blurb:["প্রতিদিনের আর বিশেষ দিনের গহনা","For everyday and special days"],intro:["এখানে পাবেন কানের দুল, হার, আংটি আর ব্রেসলেট, যা প্রতিদিনের সাজ আর বিশেষ দিন, দুটোর জন্যই মানানসই। উপহারের জন্য গহনা বেছে নিলে অর্ডারের নোটে আপনার বার্তা লিখে দিন, আমরা সেটি যত্ন করে প্যাক করে দেব। দাম ছাড়িয়ে প্রতিটি গহনার সঙ্গে জড়িয়ে থাকে কারও না কারও স্মৃতি।","Here you will find earrings, necklaces, rings and bracelets for everyday wear and special days alike. Buying a gift? Write your message in the order note and we will pack it with care. Beyond the price, every piece carries someone’s memory."]}
+};
+var PRODUCTS = [
+ {id:1,cat:"resin",name:["পুষ্প রেজিন দুল","Flower Resin Earrings"],type:"Earrings",price:480,color:"#7A6BB0"},
+ {id:2,cat:"resin",name:["সমুদ্র রেজিন পেনডেন্ট","Ocean Resin Pendant"],type:"Necklace",price:650,color:"#3D86A8"},
+ {id:3,cat:"resin",name:["গোলাপি রেজিন আংটি","Pink Resin Ring"],type:"Rings",price:420,color:"#C0628A"},
+ {id:4,cat:"resin",name:["পাতা রেজিন ব্রেসলেট","Leaf Resin Bracelet"],type:"Bracelets",price:580,color:"#4E9A6B"},
+ {id:5,cat:"clay",name:["পোড়ামাটির ঝুমকা","Terracotta Jhumka"],type:"Earrings",price:380,color:"#C0613F"},
+ {id:6,cat:"clay",name:["ক্লে ফুলের মালা","Clay Flower Necklace"],type:"Necklace",price:720,color:"#A8793A"},
+ {id:7,cat:"clay",name:["নকশা করা ক্লে আংটি","Patterned Clay Ring"],type:"Rings",price:350,color:"#8C5B7A"},
+ {id:8,cat:"clay",name:["মাটির পুঁতির ব্রেসলেট","Clay Bead Bracelet"],type:"Bracelets",price:450,color:"#B5683F"},
+ {id:9,cat:"jewellery",name:["ঝুমকা কানের দুল","Jhumka Earrings"],type:"Earrings",price:650,color:"#B8893B"},
+ {id:10,cat:"jewellery",name:["মুক্তার চোকার","Pearl Choker"],type:"Necklace",price:1200,color:"#1F5F5B"},
+ {id:11,cat:"jewellery",name:["পাথর বসানো আংটি","Stone Ring"],type:"Rings",price:550,color:"#5B7DB1"},
+ {id:12,cat:"jewellery",name:["ঘুঙুর নূপুর","Ghungur Anklet"],type:"Bracelets",price:700,color:"#4E9A8B"}
+];
+// -------------------
+var POLICY=[
+ {t:["ডেলিভারি","Delivery"],p:["প্রতিটি গহনা অর্ডারের পর যত্ন করে প্যাক করা হয়। সাধারণত নিশ্চিত করার ৩–৭ কর্মদিবসের মধ্যে পৌঁছে যায়। ডেলিভারি চার্জ আপনার ঠিকানা অনুযায়ী WhatsApp-এ জানানো হবে।","Every piece is packed with care after you order. It usually arrives within 3–7 working days of confirmation. The delivery charge depends on your address and will be shared on WhatsApp."]},
+ {t:["পেমেন্ট","Payment"],p:["ক্যাশ অন ডেলিভারি, বিকাশ বা নগদে পেমেন্ট করা যাবে। কীভাবে দেবেন, সেটি WhatsApp-এ অর্ডার নিশ্চিত করার সময় জানানো হবে।","You can pay by cash on delivery, bKash or Nagad. We will confirm how to pay on WhatsApp when we confirm your order."]},
+ {t:["ফেরত ও পরিবর্তন","Returns and exchange"],p:["গহনা হাতে বানানো, তাই সাধারণভাবে ফেরত নেওয়া হয় না। তবে পাওয়ার সময় ভাঙা বা ক্ষতিগ্রস্ত থাকলে ২৪ ঘণ্টার মধ্যে ছবিসহ জানান, আমরা পরিবর্তন করে দেব।","Our jewellery is handmade, so we do not usually take returns. If a piece arrives broken or damaged, tell us within 24 hours with a photo and we will exchange it."]},
+ {t:["কাস্টম অর্ডার","Custom orders"],p:["পছন্দের রং, সাইজ বা নকশায় গহনা বানিয়ে নেওয়া যায়। কাস্টম অর্ডারে সময় একটু বেশি লাগে এবং এগুলো ফেরত নেওয়া হয় না।","We can make a piece in your colour, size or design. Custom orders take a little longer and cannot be returned."]},
+ {t:["গহনার যত্ন","Taking care of your jewellery"],p:["পানি, পারফিউম আর সরাসরি রোদ থেকে গহনা দূরে রাখুন। ব্যবহারের পর শুকনো কাপড়ে মুছে বাক্সে রাখুন। এতে অনেক দিন নতুন থাকবে।","Keep your jewellery away from water, perfume and direct sun. Wipe it with a dry cloth after wearing and store it in its box. This keeps it looking new for a long time."]},
+ {t:["গোপনীয়তা","Privacy"],p:["আপনার নাম, ফোন নম্বর আর ঠিকানা শুধু অর্ডার পৌঁছে দিতে ব্যবহার করা হয়। এগুলো আমরা অন্য কারও সঙ্গে শেয়ার করি না।","Your name, phone number and address are used only to deliver your order. We do not share them with anyone else."]}
+];
+var L="bn",THEME="",$=function(i){return document.getElementById(i)};
+try{L=localStorage.getItem("gb_lang")||"bn";THEME=localStorage.getItem("gb_theme")||""}catch(e){}
+function s(k){return T[k][L==="bn"?0:1]}
+function lg(a){return a[L==="bn"?0:1]}
+function bn(n){return L==="bn"?String(n).replace(/\d/g,function(d){return "০১২৩৪৫৬৭৮৯"[d]}):String(n)}
+function tk(n){return "৳"+bn(n.toLocaleString("en-US"))}
+function isDark(){return THEME?THEME==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches}
+function applyTheme(){if(THEME)document.documentElement.setAttribute("data-theme",THEME);else document.documentElement.removeAttribute("data-theme");
+  $("themeBtn").textContent=isDark()?"☀":"☾";$("themeBtn").setAttribute("aria-label",s("theme"));$("themeBtn").title=s("theme")}
+function art(type,c){
+  var q='<svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="'+c+'" stroke-width="3" stroke-linecap="round" aria-hidden="true">';
+  if(type==="Earrings") q+='<circle cx="34" cy="30" r="3"/><path d="M34 33v14"/><path d="M26 74q8-30 16 0z" fill="'+c+'" fill-opacity=".25"/><circle cx="66" cy="30" r="3"/><path d="M66 33v14"/><path d="M58 74q8-30 16 0z" fill="'+c+'" fill-opacity=".25"/>';
+  else if(type==="Necklace") q+='<path d="M18 22q32 70 64 0"/><path d="M50 62v6"/><circle cx="50" cy="76" r="9" fill="'+c+'" fill-opacity=".25"/>';
+  else if(type==="Rings") q+='<circle cx="50" cy="60" r="24"/><path d="M42 36l8-12 8 12z" fill="'+c+'" fill-opacity=".3"/>';
+  else q+='<ellipse cx="50" cy="52" rx="34" ry="22"/><circle cx="16" cy="52" r="4" fill="'+c+'"/><circle cx="84" cy="52" r="4" fill="'+c+'"/><circle cx="50" cy="30" r="4" fill="'+c+'"/><circle cx="50" cy="74" r="4" fill="'+c+'"/><circle cx="26" cy="38" r="4" fill="'+c+'"/><circle cx="74" cy="38" r="4" fill="'+c+'"/><circle cx="26" cy="66" r="4" fill="'+c+'"/><circle cx="74" cy="66" r="4" fill="'+c+'"/>';
+  return q+'</svg>';
+}
+var cart={};
+var NAV=["home","resin","clay","jewellery","policy","about","contact"];
+function card(p){return '<article class="card"><div class="art" style="background:'+p.color+'1F">'+art(p.type,p.color)+'</div><div class="body"><h3>'+lg(p.name)+'</h3><small>'+s(p.cat)+'</small><div class="row"><span class="price">'+tk(p.price)+'</span><button class="add" data-id="'+p.id+'">'+s("add")+'</button></div></div></article>'}
+function route(top){
+  var h=(location.hash||"#home").slice(1); if(NAV.indexOf(h)<0)h="home";
+  $("nav").setAttribute("aria-label",s("menu"));
+  $("nav").innerHTML=NAV.map(function(n){return '<a href="#'+n+'"'+(n===h?' aria-current="page"':'')+'>'+s(n)+'</a>'}).join("");
+  var v="";
+  if(h==="home"){
+    v='<section class="hero"><div><h1>'+s("heroH")+'</h1><p>'+s("heroP")+'</p><a class="btn" href="#jewellery">'+s("heroBtn")+'</a></div><div class="heroart">'+art("Necklace","#B8893B")+'</div></section>'
+    +'<h2 class="sec">'+s("byType")+'</h2><div class="tiles">'+Object.keys(CATS).map(function(k){return '<a class="tile" href="#'+k+'"><h3>'+s(k)+'</h3><span>'+lg(CATS[k].blurb)+'</span></a>'}).join("")+'</div>'
+    +'<h2 class="sec">'+s("picks")+'</h2><div class="grid">'+[1,5,10,2].map(function(i){return card(PRODUCTS.filter(function(p){return p.id===i})[0])}).join("")+'</div>';
+  } else if(CATS[h]){
+    v='<section class="intro"><h1>'+s(h)+'</h1><p>'+lg(CATS[h].intro)+'</p></section><div class="grid">'+PRODUCTS.filter(function(p){return p.cat===h}).map(card).join("")+'</div>';
+  } else if(h==="policy"){
+    v='<section class="page"><h1>'+s("policy")+'</h1><p class="lead">'+s("polLead")+'</p>'+POLICY.map(function(x){return '<h3>'+lg(x.t)+'</h3><p>'+lg(x.p)+'</p>'}).join("")+'</section>';
+  } else if(h==="about"){
+    v='<section class="page"><h1>'+s("aboutH")+'</h1><p class="lead">'+s("about1")+'</p><p>'+s("about2")+'</p><p>'+s("about3")+'</p></section>';
+  } else {
+    v='<section class="page"><h1>'+s("contactH")+'</h1><p class="lead">'+s("contactLead")+'</p><p>'+s("phone")+PHONE_TEXT+'</p><p><a class="btn" href="https://wa.me/'+WHATSAPP+'" target="_blank" rel="noopener">'+s("wa")+'</a></p></section>';
+  }
+  $("view").innerHTML=v; if(top!==false)window.scrollTo(0,0);
+  document.title=(h==="home"?"":s(h)+" | ")+"গহনাবিলাসী – Gohonabilashi";
+}
+function chrome(){
+  document.documentElement.lang=L==="bn"?"bn":"en";
+  $("langBtn").textContent=s("langBtn");$("footer").textContent=s("footer");
+  $("cartTitle").textContent=s("cartTitle");$("closeCart").setAttribute("aria-label",s("closeCart"));
+  applyTheme();
+}
+function lines(){return Object.keys(cart).map(function(id){var p=PRODUCTS.filter(function(x){return x.id==id})[0];return {p:p,q:cart[id]}})}
+function sum(){return lines().reduce(function(a,l){return a+l.p.price*l.q},0)}
+var doneHtml=null;
+function renderCart(){
+  var n=lines().reduce(function(a,l){return a+l.q},0);
+  $("openCart").textContent=s("cart")+" ("+bn(n)+")";$("openCart").setAttribute("aria-label",s("cart"));
+  var b=$("cartBody");
+  if(doneHtml){b.innerHTML=doneHtml();return}
+  if(!n){b.innerHTML='<p class="msg">'+s("empty")+'</p>';return}
+  b.innerHTML=lines().map(function(l){return '<div class="item"><div><strong>'+lg(l.p.name)+'</strong><div class="qty"><button data-dec="'+l.p.id+'" aria-label="'+s("less")+'">−</button>'+bn(l.q)+'<button data-inc="'+l.p.id+'" aria-label="'+s("more")+'">+</button></div></div><div>'+tk(l.p.price*l.q)+'</div></div>'}).join("")
+  +'<div class="total"><span>'+s("total")+'</span><span>'+tk(sum())+'</span></div>'
+  +'<label for="nm">'+s("nameL")+'</label><input id="nm" autocomplete="name">'
+  +'<label for="ph">'+s("phoneL")+'</label><input id="ph" type="tel" autocomplete="tel">'
+  +'<label for="ad">'+s("addrL")+'</label><textarea id="ad" rows="3" autocomplete="street-address"></textarea>'
+  +'<label for="nt">'+s("noteL")+'</label><input id="nt" placeholder="'+s("notePh")+'">'
+  +'<p class="err" id="err" role="alert"></p>'
+  +'<button class="btn" id="send" style="width:100%;margin-top:12px">'+s("send")+'</button>';
+}
+function openCart(o){$("drawer").classList.toggle("open",o);$("drawer").setAttribute("aria-hidden",!o)}
+document.addEventListener("click",function(e){
+  var t=e.target;
+  if(t.dataset.id){cart[t.dataset.id]=(cart[t.dataset.id]||0)+1;doneHtml=null;renderCart();t.textContent=s("added");setTimeout(function(){t.textContent=s("add")},900)}
+  if(t.dataset.inc){cart[t.dataset.inc]++;renderCart()}
+  if(t.dataset.dec){if(--cart[t.dataset.dec]<1)delete cart[t.dataset.dec];renderCart()}
+  if(t.id==="openCart"){renderCart();openCart(true)}
+  if(t.id==="closeCart")openCart(false);
+  if(t.id==="langBtn"){L=L==="bn"?"en":"bn";try{localStorage.setItem("gb_lang",L)}catch(x){}chrome();route(false);renderCart()}
+  if(t.id==="themeBtn"){THEME=isDark()?"light":"dark";try{localStorage.setItem("gb_theme",THEME)}catch(x){}applyTheme()}
+  if(t.id==="send"){
+    var nm=$("nm").value.trim(),ph=$("ph").value.trim(),ad=$("ad").value.trim();
+    if(!nm||!ph||!ad){$("err").textContent=s("err");return}
+    var note=$("nt").value,msgLang=L;
+    var txt=s("newOrder")+"\n"+lines().map(function(l){return l.q+" x "+lg(l.p.name)+" - "+tk(l.p.price*l.q)}).join("\n")+"\n"+s("total")+": "+tk(sum())+"\n"+s("nameW")+": "+nm+"\n"+s("phoneW")+": "+ph+"\n"+s("addrW")+": "+ad+(note?"\n"+s("noteW")+": "+note:"");
+    var url="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(txt);
+    cart={};
+    doneHtml=function(){return '<div class="done"><h3 style="font-size:1.6rem">'+s("almost")+'</h3><p>'+s("almostP")+'</p><a class="btn" href="'+url+'" target="_blank" rel="noopener">'+s("openWa")+'</a></div>'};
+    renderCart();
+  }
+});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")openCart(false)});
+window.addEventListener("hashchange",function(){route()});
+chrome();route();renderCart();
+</script>
+</body>
+</html>
