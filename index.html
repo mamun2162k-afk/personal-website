@@ -88,7 +88,8 @@ input,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-
 
 <script>
 // ---- EDIT HERE ----
-var WHATSAPP = "8801700000000"; // your number with country code, no + sign
+var ORDER_API = "https://script.google.com/macros/s/AKfycbyqBM02zmRKHRWF9o8oHM597Kti-aH97BKJ8g_mfV3Hb7wDdBA1-Bd7sNOnmLaVG8DSUg/exec";
+var WHATSAPP = "8801700000000";
 var PHONE_TEXT = "+880 1700-000000";
 var T = {
  home:["হোম","Home"],resin:["রেজিন","Resin"],clay:["ক্লে","Clay"],jewellery:["জুয়েলারি","Jewellery"],about:["আমাদের কথা","Our story"],contact:["যোগাযোগ","Contact"],policy:["নীতিমালা","Policies"],polLead:["অর্ডার করার আগে আমাদের নিয়মগুলো এক নজরে দেখে নিন।","A quick look at how our orders work, before you buy."],
@@ -206,6 +207,14 @@ function renderCart(){
   +'<label for="ph">'+s("phoneL")+'</label><input id="ph" type="tel" autocomplete="tel">'
   +'<label for="ad">'+s("addrL")+'</label><textarea id="ad" rows="3" autocomplete="street-address"></textarea>'
   +'<label for="nt">'+s("noteL")+'</label><input id="nt" placeholder="'+s("notePh")+'">'
++'<label for="pm">Payment Method / পেমেন্ট পদ্ধতি</label>'
++'<select id="pm" style="width:100%;padding:12px;margin:6px 0 12px;border-radius:8px">'
++'<option value="COD">Cash on Delivery (COD)</option>'
++'<option value="bKash">bKash</option>'
++'<option value="Nagad">Nagad</option>'
++'</select>'
++'<label for="txid">Transaction ID (bKash/Nagad)</label>'
++'<input id="txid" placeholder="Transaction ID (online payment only)">'
   +'<p class="err" id="err" role="alert"></p>'
   +'<button class="btn" id="send" style="width:100%;margin-top:12px">'+s("send")+'</button>';
 }
